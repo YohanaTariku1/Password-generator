@@ -31,3 +31,17 @@ generateButton.addEventListener("click", function() {
         generateButton.disabled = true;
     }
 })
+
+let themeStyle = document.getElementById("theme-style")
+let themeButton = document.getElementById("theme-button")
+
+themeButton.addEventListener("click", function() {
+    
+    if(themeStyle.href.includes("light-theme.css") && themeButton.textContent === "Dark Mode") {
+        themeStyle.href = "dark-theme.css"
+        themeButton.textContent = "Light Mode"
+    } else {
+        themeStyle.href = "light-theme.css"
+        themeButton.textContent = "Dark Mode"
+    }
+})
